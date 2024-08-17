@@ -1,0 +1,64 @@
+/* Define the fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply the animation to the flash class */
+.flash {
+  padding: 1rem;
+  background-color: orange;
+  opacity: 0.5;
+  list-style-type: none;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  animation: fadeOut 3s cubic-bezier(0.99, 0.24, 0.87, 0.59) forwards;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  padding: -20px;
+  margin: -30px;
+}
+
+@media ((max-width: 990px)) {
+  .themeToggle {
+    display: none !important;
+  }
+  .themeToggle2 {
+    margin-left: 70vw;
+    display: block !important;
+  }
+}
+@media ((max-width: 620px)) {
+  .themeToggle {
+    display: none !important;
+  }
+  .themeToggle2 {
+    margin-left: 60vw;
+    display: block !important;
+  }
+}
+@media ((max-width: 480px)) {
+  .themeToggle {
+    display: none !important;
+  }
+  .themeToggle2 {
+    margin-left: 30vw;
+    display: block !important;
+  }
+}
+@media ((max-width: 375px)) {
+  .themeToggle {
+    display: none !important;
+  }
+  .themeToggle2 {
+    margin-left: 40vw;
+    display: block !important;
+  }
+}

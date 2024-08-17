@@ -1,0 +1,121 @@
+.content {
+  margin: auto;
+  width: 50vw;
+  min-width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+h1 {
+  font-family: "Inter", sans-serif;
+  margin-top: 10rem;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+p {
+  font-family: "Inter", sans-serif;
+  padding: 5rem;
+  text-align: center;
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+}
+small {
+  font-family: "Inter", sans-serif;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.Yt {
+  color: rgb(209, 44, 44);
+  font-family: "Inter", sans-serif;
+}
+
+.searchButton {
+  display: none;
+}
+.searchField {
+  display: none;
+}
+.searchBtn {
+  padding: 0px;
+  display: inline-flex;
+  width: 100px;
+  height: 40px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0px 25px 25px 0px;
+  border: none;
+  gap: 15px;
+  transition: all 10 ease; /* Smooth transition for the effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Initial raised effect */
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.searchBtn:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Reduced shadow to simulate pressed state */
+  transform: translateY(3px); /* Moves the element down slightly */
+}
+.searchFld {
+  display: flex;
+  width: 550px;
+  height: 40px;
+  animation: fadeIn 2s ease-in-out forwards;
+  border-radius: 25px 0px 0px 25px;
+  border: none;
+  user-select: active;
+  outline-color: blue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Initial raised effect */
+}
+.searchContainer {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 650px) {
+  .searchFld {
+    width: 50vw !important;
+    height: 40px;
+  }
+  .searchBtn {
+    width: 20vw !important;
+    height: 40px;
+  }
+}
+@media (max-width: 750px) {
+  .searchFld {
+    width: 70vw;
+    height: 40px;
+  }
+  .searchBtn {
+    width: 10vw;
+    height: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .searchFld {
+    width: 60vw;
+    height: 40px;
+  }
+  .searchBtn {
+    width: 20vw;
+    height: 40px;
+  }
+}

@@ -1,0 +1,93 @@
+{% extends 'base_layout.html' %} {% block head %}
+<style>
+  .themeToggle2 {
+    display: sticky !important;
+  }
+</style>
+{% endblock %} {% block title %} Results{% endblock %} {% block content %}
+<div class="content">
+  <div class="videoContent" id="videoContent">
+    <div id="player" style="border-radius: 15px"></div>
+  </div>
+
+  <div class="titleCard">
+    <h2>{% if title %} {{ title }} {% endif %}</h2>
+  </div>
+  <div class="overviewTab">
+    <div class="overview-title">Overview</div>
+    <div
+      id="overview"
+      style="position: relative; height: 40vh; width: 100%"
+    ></div>
+  </div>
+
+  <div class="commentContent">
+    <div class="commentBar">
+      <div class="commentCount" id="commentCount"></div>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary sort"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style="
+            display: flex;
+            color: black;
+            border: none;
+            font-family: Arial;
+            background: none;
+          "
+        >
+          <i class="material-icons">sort</i>
+          <div class="btn-text">Sort By</div>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" onclick="displayAll()">All comments</a>
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="displayPositive()"
+              >Positive comments</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="displayNegative()"
+              >Negative comments</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="displayNeutral()"
+              >Neutral comments</a
+            >
+          </li>
+        </ul>
+      </div>
+      <button
+        onclick="displayStats()"
+        class="btn btn-secondary sort"
+        style="
+          display: flex;
+          color: black;
+          border: none;
+          font-family: Arial;
+          background: none;
+        "
+      >
+        <i class="material-icons">show_chart</i>
+        <div class="btn-text">Stats</div>
+      </button>
+    </div>
+
+    <div class="comment" id="commentsContainer"></div>
+  </div>
+</div>
+
+<script>
+  const resultList = {{ result | tojson }};
+  const commentList = {{ comments | tojson }};
+  const vId = "{{ id }}";
+</script>
+<script src="{{url_for('static',filename='js/comments.js')}}"></script>
+<script src="{{url_for('static',filename='js/overview_graph.js')}}"></script>
+
+{% endblock %}

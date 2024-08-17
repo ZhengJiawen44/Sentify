@@ -1,0 +1,134 @@
+{% extends 'navbar.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{url_for('static',filename='css/docs.css')}}"
+/>{% endblock %} {% block title %}Documentation {% endblock %} {% block content
+%}
+<header>
+  <h1>YT Sentiment Analyzer Web App</h1>
+  <p>A tool for analyzing YouTube video comments and their sentiment.</p>
+</header>
+
+<main>
+  <section>
+    <h2>Overview</h2>
+    <p>
+      The YT Sentiment Analyzer Web App allows you to analyze the sentiment of
+      comments on YouTube videos. It utilizes the
+      <code>YT_Sentiment</code> Python package to fetch and process comments,
+      categorizing them as positive, negative, or neutral, and providing
+      sentiment scores for further analysis.
+    </p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>
+        <strong>Fetch Comments:</strong> Retrieve up to 12,000 comments from a
+        specified YouTube video.
+      </li>
+      <li>
+        <strong>Sentiment Analysis:</strong> Classify comments into positive,
+        negative, or neutral categories using VADER sentiment analysis.
+      </li>
+      <li>
+        <strong>Comprehensive Reporting:</strong> Display categorized comments
+        and sentiment polarity scores.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How It Works</h2>
+    <ol>
+      <li>
+        <strong>Fetch Comments:</strong> The app uses the YouTube Data API to
+        collect comments from a given video URL. Hyperlinks, HTML tags, and
+        excessive emojis are filtered out.
+      </li>
+      <li>
+        <strong>Analyze Sentiment:</strong> VADER sentiment analysis evaluates
+        each comment, categorizing them as positive, negative, or neutral based
+        on their content.
+      </li>
+      <li>
+        <strong>Display Results:</strong> The app displays categorized comments
+        and sentiment scores in an easy-to-read format.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Installation</h2>
+    <p>To set up the YT Sentiment Analyzer Web App:</p>
+    <ol>
+      <li><strong>Install the Required Package:</strong></li>
+      <pre><code>pip install YT_Sentiment</code></pre>
+      <li><strong>Clone the Repository (if applicable):</strong></li>
+      <pre><code>git clone &lt;repository_url&gt;</code></pre>
+      <li>
+        <strong
+          >Navigate to the Project Directory and install dependencies:</strong
+        >
+      </li>
+      <pre><code>cd &lt;project_directory&gt;
+pip install -r requirements.txt</code></pre>
+      <li><strong>Run the Flask Application:</strong></li>
+      <pre><code>python app.py</code></pre>
+    </ol>
+  </section>
+
+  <section>
+    <h2>API Usage</h2>
+    <h3>Initialization</h3>
+    <pre><code>from YT_Sentiments.sentiment import analyzer
+
+# Replace with your API key and video URL
+obj = analyzer("YOUR_API_KEY", "https://www.youtube.com/watch?v=VIDEO_ID", 100)</code></pre>
+
+    <h3>Methods</h3>
+    <ul>
+      <li>
+        <strong>get_analysis()</strong>: Returns a comprehensive analysis of
+        comments.
+      </li>
+      <li>
+        <strong>get_positive()</strong>: Retrieves a list of positive comments.
+      </li>
+      <li>
+        <strong>get_negative()</strong>: Retrieves a list of negative comments.
+      </li>
+      <li>
+        <strong>get_neutral()</strong>: Retrieves a list of neutral comments.
+      </li>
+      <li>
+        <strong>get_polarity()</strong>: Retrieves sentiment polarity scores for
+        each comment.
+      </li>
+    </ul>
+
+    <h3>Helper Functions</h3>
+    <ul>
+      <li>
+        <strong>getSentimentScore(comment)</strong>: Analyzes the sentiment of a
+        single comment.
+      </li>
+      <li>
+        <strong>getComments(LINK, API_KEY, LIMIT)</strong>: Fetches and cleans
+        comments from a YouTube video.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>License</h2>
+    <p>This application is licensed under [Your License Here].</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 YT Sentiment Analyzer Web App</p>
+</footer>
+{% endblock %}

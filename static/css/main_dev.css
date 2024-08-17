@@ -1,0 +1,130 @@
+.content {
+  display: flex;
+}
+.videoContent {
+  width: 1008px;
+  height: 567px;
+  background-color: #d9d9d9;
+  margin: 30px 40px 10px 85px;
+  border-radius: 15px;
+}
+.video {
+  width: 1008px;
+  height: 567px;
+  border-radius: 15px;
+}
+.titleCard {
+  width: 1008px;
+  height: 50px;
+  background-color: #6ee943;
+  margin-left: 85px;
+  display: flex;
+  align-items: center;
+}
+.commentContent {
+  width: 1008px;
+  min-height: 400px;
+  background-color: #d9d9d9;
+  margin: 40px;
+  margin-left: 85px;
+}
+.commentBar {
+  display: flex;
+  align-items: center;
+  width: 1008px;
+  height: 70px;
+  background-color: #6ee943;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.25em;
+  margin: 10px;
+  cursor: pointer;
+}
+* {
+  font-family: "YouTube Sans Dark", sans-serif;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em !important;
+  font-weight: 600 !important;
+  letter-spacing: -1.5px !important;
+}
+.greaterSearchBar {
+  width: 750px;
+  height: 40px;
+  margin-left: 250px;
+  display: flex;
+}
+
+.searchButton {
+  padding: 0px;
+  display: inline-flex;
+  width: 100px;
+  height: 40px;
+  background-color: #75f048;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0px 25px 25px 0px;
+  border: none;
+  gap: 15px;
+}
+.searchField {
+  display: flex;
+  width: 550px;
+  height: 40px;
+  background-color: #6ee943;
+  border-radius: 25px 0px 0px 25px;
+  border: none;
+  padding: 15px;
+  user-select: active;
+  outline-color: blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial raised effect */
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1; /* Firefox */
+  font-family: "Arial";
+}
+.commentCount {
+  margin-right: 50px;
+  font-size: 1.25em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600 !important;
+  letter-spacing: -1px !important;
+}
+
+.sort:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Creates the raised effect */
+  transform: translateY(-2px); /* Moves the element up slightly */
+}
+.searchButton {
+  transition: all 10 ease; /* Smooth transition for the effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial raised effect */
+}
+
+.searchButton:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow to simulate pressed state */
+  transform: translateY(3px); /* Moves the element down slightly */
+}
+
+.comment {
+  padding: 10px;
+  font-size: 1.2 5em;
+}
+
+.overviewTab {
+  display: flex;
+  align-items: center;
+  width: 1008px;
+  height: 200px;
+  background-color: #eae9e9;
+  margin-left: 85px;
+  border-radius: 25px;
+  padding: 50px;
+  font-size: 1.25em;
+  gap: 100px;
+}
