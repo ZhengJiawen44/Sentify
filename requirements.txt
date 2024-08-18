@@ -1,7 +1,4 @@
-emoji==2.12.1
+YT_Sentiments==0.0.6
 Flask==2.2.2
 Flask_WTF==1.1.1
-google_api_python_client==2.139.0
-vaderSentiment==3.3.2
-vaderSentiment==3.3.2
 WTForms==3.0.1
