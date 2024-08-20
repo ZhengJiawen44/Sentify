@@ -2,6 +2,7 @@
 
 Sentify is a website that runs on top of the Sentiment analyzer library to analyze YouTube comments. 
 <br/>
+<br/>
 <img src="image.png"></img>
 <br/>
 ## Announcement
